@@ -10,25 +10,25 @@ export default function MenuBar() {
     <nav className="bg-white shadow-md p-4 flex justify-center space-x-4">
       <Link
         href="/"
-        className={`${
-          currentPath === '/' ? 'active' : ''
-        } hover:underline`}
+        className={`underline-hover ${
+          currentPath === '/' ? 'font-semibold' : 'font-light'
+        }`}
       >
         HOME
       </Link>
       <Link
-        href="/about"
-        className={`${
-          currentPath === '/about' ? 'active' : ''
-        } hover:underline`}
+        href="/articles"
+        className={`underline-hover ${
+          currentPath === '/articles' ? 'font-semibold' : 'font-light'
+        }`}
       >
         ARTICLES
       </Link>
       <Link
-        href="/contact"
-        className={`${
-          currentPath === '/contact' ? 'active' : ''
-        } hover:underline`}
+        href="/about-me"
+        className={`underline-hover ${
+          currentPath === '/about-me' ? 'font-semibold' : 'font-light'
+        }`}
       >
         ABOUT ME
       </Link>

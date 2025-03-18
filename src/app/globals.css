@@ -21,19 +21,46 @@ body {
 
 nav {
   font-family: 'Sora', sans-serif; /* Ensure Sora is applied to Navbar */
-  font-size: 12px;
-  font-weight: 300; /* Default to Light weight */
+  font-size: 12px; /* Default font size */
+  font-weight: 300; /* Default to light weight */
 }
 
+/* Remove the default underline and hover behavior globally */
 a {
   text-decoration: none; /* Remove underline by default */
   color: black; /* Set the link text to black */
 }
 
 a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  /* Remove underline on hover completely */
+  text-decoration: none;
 }
 
+/* Active links styling */
 .active {
   font-weight: 600; /* Semi-bold for active links */
+}
+
+/* Custom underline animation */
+@layer utilities {
+  .underline-hover {
+    position: relative;
+    text-decoration: none; /* Disable the default underline */
+    color: black; /* Set text color */
+  }
+
+  .underline-hover::after {
+    content: ""; /* Create pseudo-element for underline */
+    position: absolute;
+    bottom: 0; /* Position underline below the text */
+    left: 0;
+    width: 0; /* Initially hidden */
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation for left-to-right */
+  }
+
+  .underline-hover:hover::after {
+    width: 100%; /* Expand underline on hover */
+  }
 }
