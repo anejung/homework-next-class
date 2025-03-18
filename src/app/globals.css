@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;600&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -20,17 +20,20 @@ body {
 }
 
 nav {
-  font-family: 'Sora', sans-serif; /* Apply Sora only to the Navbar */
-  font-size: 12px; /* Set font size */
-  font-weight: 300; /* Light font weight */
-  color: black; /* Black text */
+  font-family: 'Sora', sans-serif; /* Ensure Sora is applied to Navbar */
+  font-size: 12px;
+  font-weight: 300; /* Default to Light weight */
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Remove underline by default */
+  color: black; /* Set the link text to black */
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.active {
+  font-weight: 600; /* Semi-bold for active links */
 }
