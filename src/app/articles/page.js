@@ -1,4 +1,5 @@
 import MenuBar from '../component/MenuBar';
+import Image from 'next/image';
 
 export default function Articles() {
   const articles = [
