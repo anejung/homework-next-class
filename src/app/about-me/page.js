@@ -1,4 +1,5 @@
 import MenuBar from '../component/MenuBar';
+import Image from 'next/image';
 
 export default function AboutMe() {
   return (
@@ -7,10 +8,12 @@ export default function AboutMe() {
       <div style={{ display: 'flex', alignItems: 'center', padding: '2rem' }}>
         {/* Image Section */}
         <div style={{ flex: '0 0 150px', marginRight: '2rem' }}>
-          <img 
+          <Image 
             src="/ami.png" 
             alt="Ami" 
-            style={{ width: '100%', borderRadius: '50%' }} /* Circular style */
+            width={150}
+            height={150}
+            style={{ borderRadius: '50%' }}
           />
         </div>
 

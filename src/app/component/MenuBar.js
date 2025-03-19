@@ -33,5 +33,5 @@ export default function MenuBar() {
         ABOUT ME
       </Link>
     </nav>
-  );
+  ); 
 }
