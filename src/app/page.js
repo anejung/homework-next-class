@@ -1,15 +1,17 @@
-
 import MenuBar from './component/MenuBar';
-
 
 export default function Home() {
   return (
-    <><MenuBar />
-      <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-        <h1 className="text-4xl font-bold text-blue-600">Homepage</h1>
-        <p className="mt-4 text-lg text-gray-700">บ้านของข้าเจ้า</p>
-      </main>
+    <>
+      <MenuBar />
+      <div style={{ textAlign: 'center', padding: '2rem' }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>
+          Hi, This is Ami's first website
+        </h1>
+        <p style={{ fontSize: '1.2rem' }}>
+          Heading to the brighter world
+        </p>
+      </div>
     </>
   );
 }
-

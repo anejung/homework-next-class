@@ -1,66 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
 @import "tailwindcss";
 
+/* Root variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FFF001; /* Background color */
+  --text-color: #475D00; /* Text color */
+  --font-nav: 'Sora', sans-serif; /* Navbar font */
+  --font-body: 'Almendra Display', serif; /* Body font */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Sora', Arial, sans-serif; /* Apply Sora globally */
+  background: var(--background); /* Yellow background */
+  color: var(--text-color); /* Text color */
+  font-family: var(--font-body); /* Almendra Display for body */
+  font-size: 32px; /* Font size for body */
+  margin: 0; /* Remove default margin */
 }
 
 nav {
-  font-family: 'Sora', sans-serif; /* Ensure Sora is applied to Navbar */
-  font-size: 12px; /* Default font size */
-  font-weight: 300; /* Default to light weight */
+  background-color: var(--background); /* Navbar background color */
+  color: var(--text-color); /* Navbar text color */
+  font-family: var(--font-nav); /* Sora font for navbar */
+  font-size: 12px; /* Font size for navbar */
+  box-shadow: none; /* Remove shadow */
+  padding: 1rem; /* Spacing */
 }
 
-/* Remove the default underline and hover behavior globally */
 a {
-  text-decoration: none; /* Remove underline by default */
-  color: black; /* Set the link text to black */
+  color: var(--text-color); /* Link color */
+  text-decoration: none; /* Remove default underline */
 }
 
-a:hover {
-  /* Remove underline on hover completely */
-  text-decoration: none;
-}
-
-/* Active links styling */
-.active {
-  font-weight: 600; /* Semi-bold for active links */
-}
-
-/* Custom underline animation */
 @layer utilities {
   .underline-hover {
     position: relative;
-    text-decoration: none; /* Disable the default underline */
-    color: black; /* Set text color */
+    text-decoration: none; /* Disable default underline */
+    color: var(--text-color); /* Link text color */
   }
 
   .underline-hover::after {
     content: ""; /* Create pseudo-element for underline */
     position: absolute;
-    bottom: 0; /* Position underline below the text */
+    bottom: 0;
     left: 0;
-    width: 0; /* Initially hidden */
-    height: 2px; /* Thickness of the underline */
-    background-color: black; /* Color of the underline */
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color); /* Underline color */
     transition: width 0.3s ease; /* Smooth animation for left-to-right */
   }
 
   .underline-hover:hover::after {
-    width: 100%; /* Expand underline on hover */
+    width: 100%; /* Expand underline fully on hover */
   }
 }

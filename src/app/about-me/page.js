@@ -1,14 +1,25 @@
 import MenuBar from '../component/MenuBar';
 
-
 export default function AboutMe() {
   return (
-    <><MenuBar />
-      <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-        <h1 className="text-4xl font-bold text-purple-600">About Me Page</h1>
-        <p className="mt-4 text-lg text-gray-700">This is the About Me page. Learn more about who I am here!</p>
-      </main>
+    <>
+      <MenuBar />
+      <div style={{ display: 'flex', alignItems: 'center', padding: '2rem' }}>
+        {/* Image Section */}
+        <div style={{ flex: '0 0 150px', marginRight: '2rem' }}>
+          <img
+            src="/ami.png"
+            alt="Ami"
+            style={{ width: '100%', borderRadius: '50%' }} /* Circular style */
+          />
+        </div>
+        {/* Text Section */}
+        <div>
+          <p style={{ fontSize: '1.5rem', fontWeight: 'normal', color: '#475D00' }}>
+            let me sleep first, explain myself later
+          </p>
+        </div>
+      </div>
     </>
   );
 }
-
