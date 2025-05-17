@@ -22,7 +22,7 @@ export default function AboutMe() {
         {/* Text Section */}
         <div>
           <p style={{ fontSize: '1.5rem', fontWeight: 'normal', color: '#475D00' }}>
-            let me sleep first, explain myself later
+            {/* let me sleep first, explain myself later */}
           </p>
         </div>
       </div>

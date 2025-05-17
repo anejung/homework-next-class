@@ -3,7 +3,7 @@ import MenuBar from './component/MenuBar';
 
 
 export default function Home() {
-  return null
+  // return null
   return (
 
     <>
